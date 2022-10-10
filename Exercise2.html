@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p1").hide();
+            var text = "";
+            $("#red").click(function () {
+                $("p1").css("color", "red")
+                $("p1").show();
+                text += " red,"
+                document.getElementById("par2").innerHTML = text;
+            });
+            $("#green").click(function () {
+                $("p1").css("color", "green")
+                $("p1").show();
+                text += " green,"
+                document.getElementById("par2").innerHTML = text;
+            });
+            $("#yellow").click(function () {
+                $("p1").css("color", "yellow")
+                $("p1").show();
+                text += " yellow,"
+                document.getElementById("par2").innerHTML = text;
+            });
+            $("#orange").click(function () {
+                $("p1").css("color", "orange")
+                $("p1").show();
+                text += " orange,"
+                document.getElementById("par2").innerHTML = text;
+            });
+            $("#blue").click(function () {
+                $("p1").css("color", "blue")
+                $("p1").show();
+                text += " blue,"
+                document.getElementById("par2").innerHTML = text;
+            });
+            $("#purple").click(function () {
+                $("p1").css("color", "purple")
+                $("p1").show();
+                text += " purple,"
+                document.getElementById("par2").innerHTML = text;
+            });
+        });
+    </script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+            left: 0;
+        }
+
+        /* Control the right side */
+        .right {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="split left">
+        <h1>Exercise 2</h1>
+        <p>
+            Pick your color:
+        </p>
+        <table>
+            <tr>
+                <td>
+                    <div id=purple class="box" style="background-color:purple"></div>
+                </td>
+                <td>
+                    <div id=orange class="box" style="background-color:orange"></div>
+                </td>
+                <td>
+                    <div id=blue class="box" style="background-color:blue"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id=red class="box" style="background-color:red"></div>
+                </td>
+                <td>
+                    <div id=yellow class="box" style="background-color:yellow"></div>
+                </td>
+                <td>
+                    <div id=green class="box" style="background-color:green"></div>
+                </td>
+            </tr>
+        </table>
+        <p1 id="par">
+            Hello World!!!
+        </p1>
+    </div>
+    <div class="split right">
+        <p2 id="par2" style="float:right">
+            
+        </p2>
+    </div>
+
+</body>
+
+</html>

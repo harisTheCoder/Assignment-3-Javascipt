@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p1").hide();
+            $("#button").click(function () {
+                var number = document.getElementById("num").value;
+                var text = "Prime numbers up to "+number+":"
+                text += " 1"
+                for (let n = 2; n < number; n++) {
+                    var prime = true;
+                    for (let div = 2; div < n; div++) {
+                        if (n%div==0){
+                            prime = false;
+                        }
+                    }
+                    if (prime){
+                        text += ", "+n;
+                    }
+                }
+                text += "."
+                document.getElementById("par").innerHTML = text;
+                $("p1").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Exercise 1</h1>
+    <p>
+        Enter a number:
+        <input type="number" id="num" name="num" class="form-control" required>
+        <button type="submit" id="button">Ok!</button>
+    </p>
+    <p1 id="par">
+        
+    </p1>
+
+</body>
+
+</html>
